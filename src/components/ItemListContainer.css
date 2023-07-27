@@ -1,0 +1,13 @@
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+    border-radius: 1rem;
+    background-color: gray;
+    opacity: 90%;
+    width: 20%;
+    
+    
+}
