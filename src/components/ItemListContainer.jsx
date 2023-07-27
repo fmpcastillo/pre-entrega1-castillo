@@ -1,14 +1,24 @@
 import React from "react";
-import "./ItemListContainer.css"
 
-const ItemListContainer = () => {
+const ItemSaludo = ({texto}) => {
+  return <p>{texto}</p>;   
+};
+
+
+function ItemListContainer() {
+  const containerStyle = {
+    backgroundColor: 'grey',
+    padding: '20px',
+    border: '1px ',
+    textAlign: 'center',
+  };
+
   return (
-    <div className="listContainer">
-        <h3>Remera</h3> 
-        <p>Talles S X L</p>      
-        <p>$ 2000</p>
+    <div style={containerStyle}> 
+     <ItemSaludo texto="Bienvenido a nuestro e-comerce"></ItemSaludo>
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+
+export default ItemListContainer;
