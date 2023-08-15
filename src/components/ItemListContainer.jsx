@@ -1,24 +1,25 @@
 import React from "react";
-
-const ItemSaludo = ({texto}) => {
-  return <p>{texto}</p>;   
-};
+import { useEffect, useState } from "react";
+import { pedirDatos } from "../cagar/pedirDatos";
 
 
-function ItemListContainer() {
-  const containerStyle = {
-    backgroundColor: 'grey',
-    padding: '20px',
-    border: '1px ',
-    textAlign: 'center',
-  };
+
+const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([]);
+
+    useEffect(() => {
+        pedirDatos()
+            .then((res) => {
+                setProductos(res);
+            })
+    }, [])
+
 
   return (
-    <div style={containerStyle}> 
-     <ItemSaludo texto="Bienvenido a nuestro e-comerce"></ItemSaludo>
+    <div>
+        ItemListContainer
     </div>
-  );
+  )
 }
-
-
 export default ItemListContainer;
